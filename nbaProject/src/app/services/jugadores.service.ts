@@ -11,8 +11,14 @@ export class JugadoresService {
 
   constructor(private http: HttpClient) { }
 
-  public playersList(): Observable<JugadoresResponse>{
+ // public playersList(): Observable<JugadoresResponse>{
 
-    return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/players?`)
+   // return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/players?`)
+  //}
+
+  getPlayers(page: number): Observable<JugadoresResponse>{
+
+   return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/jugadores?page=${page}`);
+
   }
 }
