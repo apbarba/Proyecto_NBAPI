@@ -6,10 +6,9 @@ import { JugadoresListComponent } from './components/jugadores-list/jugadores-li
 import { EquiposListComponent } from './components/equipos-list/equipos-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialsImportModule } from './materials-import/materials-import.module';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingRoutingModule } from './app-routing-routing.module';
-
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -20,9 +19,9 @@ import { AppRoutingRoutingModule } from './app-routing-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingRoutingModule,
+    AppRoutingModule,
     HttpClientModule,
-    FormControl,
+    FormsModule,
     ReactiveFormsModule,
     MaterialsImportModule,
     BrowserAnimationsModule

@@ -3,3 +3,9 @@
         <img src="https://png.monster/wp-content/uploads/2022/02/png.monster-587.png" alt="">
     </div>
 </header>
+
+<div *ngFor="let players of playersList">
+    <p style="color: black;"> {{players.firstName}} </p>
+
+    <img [src]="mostrarImg(players)" alt="">
+</div>

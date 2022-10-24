@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JugadoresResponse, League, Players } from 'src/app/Interfaces/jugadores-interface';
+import { Players } from 'src/app/Interfaces/jugadores.interface';
 import { JugadoresService } from 'src/app/services/jugadores.service';
 
 @Component({
@@ -16,32 +16,27 @@ export class JugadoresListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getPlayersPage(1);
+   this.getPlayersPage();
 
   }
+  
 
   mostrarImg(players: Players){
 
-    let id = players.personId.split("/")[5]
+    let id = players.personId;
 
     return `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${id}.png`
 
   }
 
-  getPlayersPage(page: number){
+  getPlayersPage(){
 
-    this.playersService.getPlayers(page).subscribe(resp => {
+    this.playersService.getPlayers().subscribe((resp)=> {
 
-      this.playersList = resp.results;
-      this.numPages = Math.ceil(resp.count / 10);
+     this.playersList = resp.league.standard;
+     
 
     });
-
-  }
-
-  counter(){
-
-    return new Array(this.numPages);
 
   }
 
