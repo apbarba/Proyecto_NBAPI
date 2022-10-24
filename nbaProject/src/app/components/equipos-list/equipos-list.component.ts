@@ -10,11 +10,13 @@ import { EquiposService } from 'src/app/services/equipos.service';
 export class EquiposListComponent implements OnInit {
 
   listaEquipos : Equipo[] = [];
+  anoElegido ="2022"
+  anosPosibles = ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2022"]
 
   constructor(private equiposService:EquiposService) { }
 
   ngOnInit(): void {
-    this.getListaEquipos("2022")
+    this.getListaEquipos(this.anoElegido)
   }
 
   public getListaEquipos(year : string){

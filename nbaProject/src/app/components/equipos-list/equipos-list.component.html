@@ -1,16 +1,46 @@
-<div id=contenedor fxLayout="row">
-  <mat-card fxFlex="25%" *ngFor="let equipo of listaEquipos">
-    <mat-card-header fxLayoutAlign="center">
-      <mat-card-title>{{ equipo.fullName }}</mat-card-title>
-    </mat-card-header>
+<header fxLayoutAlign="center center" fxLayout="column">
+  <div>
     <img
-      mat-card-image
-      [src]="getImgEquipo(equipo)"
-      alt="Logo Equipo NBA"
-      height="250px"
+      src="https://graffica.info/wp-content/uploads/2017/08/NBA-logo-png-download-free-1200x675.png"
+      alt="logo NBA"
+      height="300px"
     />
-    <mat-card-actions>
-      <button mat-button >+ Ver Jugadores</button>
-    </mat-card-actions>
-  </mat-card>
+  </div>
+  <h1><a routerLink="">Menu Principal</a> / Equipos</h1>
+</header>
+
+<div id="colorinchi" fxLayoutAlign="center">
+  <mat-select
+    [(value)]="anoElegido"
+    (selectionChange)="getListaEquipos(anoElegido)"
+  >
+    <mat-option value="">Seleccione un año</mat-option>
+    <mat-option *ngFor="let ano of anosPosibles" [value]="ano">{{
+      ano
+    }}</mat-option>
+  </mat-select>
+</div>
+
+<div id="contenedor" fxLayout="row wrap" fxLayoutAlign="center">
+  <div
+    *ngFor="let equipo of listaEquipos"
+    fxFlex="20"
+    fxLayoutAlign="space-around center"
+  >
+    <mat-card class="tarjetaEquipo">
+      <mat-card-header fxLayoutAlign="center">
+        <mat-card-title>{{ equipo.nickname }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        [src]="getImgEquipo(equipo)"
+        alt="Logo Equipo NBA"
+        height="250px"
+        onerror="this.src='https://cdn-icons-png.flaticon.com/512/2748/2748558.png'"
+      />
+      <mat-card-actions>
+        <button mat-button>+ Ver Jugadores</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
