@@ -1,2 +1,16 @@
-
-<p *ngFor="let equipo of listaEquipos">{{equipo.fullName}}</p>
+<div id=contenedor fxLayout="row">
+  <mat-card fxFlex="25%" *ngFor="let equipo of listaEquipos">
+    <mat-card-header fxLayoutAlign="center">
+      <mat-card-title>{{ equipo.fullName }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="getImgEquipo(equipo)"
+      alt="Logo Equipo NBA"
+      height="250px"
+    />
+    <mat-card-actions>
+      <button mat-button >+ Ver Jugadores</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

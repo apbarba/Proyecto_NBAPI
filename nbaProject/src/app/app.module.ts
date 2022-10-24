@@ -9,20 +9,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     JugadoresListComponent,
     EquiposListComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    ObtenerImgPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MaterialsImportModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

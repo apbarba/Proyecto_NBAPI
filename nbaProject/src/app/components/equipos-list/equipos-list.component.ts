@@ -23,4 +23,8 @@ export class EquiposListComponent implements OnInit {
     })
   }
 
+  public getImgEquipo(equipo : Equipo){
+    return `https://cdn.nba.com/logos/nba/${equipo.teamId}/global/L/logo.svg`
+  }
+
 }
