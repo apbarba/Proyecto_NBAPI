@@ -4,8 +4,30 @@
     </div>
 </header>
 
-<div *ngFor="let players of playersList">
-    <p style="color: black;"> {{players.firstName}} </p>
-
-    <img [src]="mostrarImg(players)" alt="">
-</div>
+<div class="contenedor">
+    <mat-card class="cartas" *ngFor="let players of playersList">
+        <mat-card-header>
+            <mat-card-title>{{players.firstName}} {{players.lastName}}</mat-card-title>
+        </mat-card-header>
+      
+        <img mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores">
+      
+        <mat-card-content>
+            <p>
+                Estatura: {{players.heightMeters}} <br>
+                Equipo: {{players.teamId}} <br>
+                Número de camiseta: {{players.jersey}} <br>
+                Año debut: {{players.nbaDebutYear}} <br>
+                Años Acctivo: {{players.yearsPro}} <br>
+                Pais: {{players.country}}
+            </p>
+            <p *ngIf="players.isActive">Activo: Si</p>
+            <p *ngIf="!players.isActive">Activo: No</p>
+        </mat-card-content>
+       
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>

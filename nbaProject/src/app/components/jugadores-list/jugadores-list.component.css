@@ -7,6 +7,18 @@ header{
 }
 
 img{
-    width: 15%;
+    width: 35%;
+    text-align: center;
+    border: black;
+}
+
+.cartas{
+
+    width: 18%;
+    border: 1px solid rgb(255, 255, 142);
+    display: inline-block;
+    margin: 20px ;
+    border-radius: 5%;
+    text-align: center;
 }
 

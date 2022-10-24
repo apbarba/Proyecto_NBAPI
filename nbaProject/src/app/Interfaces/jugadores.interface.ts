@@ -1,10 +1,8 @@
 
 
 export interface JugadoresResponse {
-    count: number;
     _internal: Internal;
     league:    League;
-    results: Players[];
 }
 
 export interface Internal {
@@ -53,7 +51,6 @@ export interface Players {
     lastAffiliation:       string;
     country:               string;
     isallStar?:            boolean;
-    url:                   string;
 }
 
 export interface Draft {
