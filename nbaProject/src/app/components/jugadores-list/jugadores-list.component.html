@@ -4,13 +4,37 @@
     </div>
 </header>
 
-<div class="contenedor">
-    <mat-card class="cartas" *ngFor="let players of playersList">
-        <mat-card-header>
+<h1><a routerLink="">Home</a></h1>
+
+<mat-form-field id="color" fxLayoutAlign="center">
+   
+    <mat-label>Seleccionar Año</mat-label>
+   
+    <mat-select
+      [(value)]="anio"
+      (selectionChange)="getPlayersPage(anio)"
+    >
+    <mat-option *ngFor="let anio of anios" [value]="anio">
+            {{anio}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+  <pagination-controls  fxLayoutAlign="left" (pageChange)="pageActual = $event"></pagination-controls>
+
+
+
+<div class="contenedor" fxLayout="row wrap" fxLayoutAlign="center">
+
+    <mat-card class="cartas" *ngFor="let players of playersList | paginate: {itemsPerPage: 10, currentPage: pageActual}">
+       
+        <mat-card-header fxLayout="center">
+            
             <mat-card-title>{{players.firstName}} {{players.lastName}}</mat-card-title>
+
         </mat-card-header>
       
-        <img mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores">
+        <img class="imgJugadores" mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores" height="35%" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1774/1774530.png'">
       
         <mat-card-content>
             <p>
@@ -25,9 +49,8 @@
             <p *ngIf="!players.isActive">Activo: No</p>
         </mat-card-content>
        
-        <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions>
+        
+    
     </mat-card>
+    
   </div>
