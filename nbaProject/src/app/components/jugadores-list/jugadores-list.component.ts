@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Players } from 'src/app/Interfaces/jugadores.interface';
+import { Player } from 'src/app/Interfaces/jugadores.interface';
 import { JugadoresService } from 'src/app/services/jugadores.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { JugadoresService } from 'src/app/services/jugadores.service';
 })
 export class JugadoresListComponent implements OnInit {
 
-  playersList: Players[] = [];
-  lista2: Players[] = [];
+  playersList: Player[] = [];
+  lista2: Player[] = [];
   numPages = 0;
   anio = '2022';
   pageActual = 1;
@@ -25,7 +25,7 @@ export class JugadoresListComponent implements OnInit {
   }
   
 
-  mostrarImg(players: Players){
+  mostrarImg(players: Player){
 
     let id = players.personId;
 

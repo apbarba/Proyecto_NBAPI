@@ -4,27 +4,37 @@
     </div>
 </header>
 
-<div id="color" fxLayoutAlign="center">
+<h1><a routerLink="">Home</a></h1>
+
+<mat-form-field id="color" fxLayoutAlign="center">
+   
+    <mat-label>Seleccionar Año</mat-label>
+   
     <mat-select
       [(value)]="anio"
       (selectionChange)="getPlayersPage(anio)"
     >
-      <mat-option value="">Seleccione un año</mat-option>
-      <mat-option *ngFor="let ano of anios" [value]="ano">
-                {{ano}}
-    </mat-option>
+    <mat-option *ngFor="let anio of anios" [value]="anio">
+            {{anio}}
+        </mat-option>
     </mat-select>
-  </div>
+</mat-form-field>
+
+  <pagination-controls  fxLayoutAlign="left" (pageChange)="pageActual = $event"></pagination-controls>
 
 
 
-<div class="contenedor">
+<div class="contenedor" fxLayout="row wrap" fxLayoutAlign="center">
+
     <mat-card class="cartas" *ngFor="let players of playersList | paginate: {itemsPerPage: 10, currentPage: pageActual}">
-        <mat-card-header>
+       
+        <mat-card-header fxLayout="center">
+            
             <mat-card-title>{{players.firstName}} {{players.lastName}}</mat-card-title>
+
         </mat-card-header>
       
-        <img mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores">
+        <img class="imgJugadores" mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores" height="35%" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1774/1774530.png'">
       
         <mat-card-content>
             <p>
@@ -42,8 +52,5 @@
         
     
     </mat-card>
-
-
-    <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
     
   </div>

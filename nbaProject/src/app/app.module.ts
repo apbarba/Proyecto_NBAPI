@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule,
     MaterialsImportModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
