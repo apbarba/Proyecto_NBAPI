@@ -1,1 +1,33 @@
-<p>jugadores-list works!</p>
+<header>
+    <div class="cabecero">
+        <img src="https://png.monster/wp-content/uploads/2022/02/png.monster-587.png" alt="">
+    </div>
+</header>
+
+<div class="contenedor">
+    <mat-card class="cartas" *ngFor="let players of playersList">
+        <mat-card-header>
+            <mat-card-title>{{players.firstName}} {{players.lastName}}</mat-card-title>
+        </mat-card-header>
+      
+        <img mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores">
+      
+        <mat-card-content>
+            <p>
+                Estatura: {{players.heightMeters}} <br>
+                Equipo: {{players.teamId}} <br>
+                Número de camiseta: {{players.jersey}} <br>
+                Año debut: {{players.nbaDebutYear}} <br>
+                Años Acctivo: {{players.yearsPro}} <br>
+                Pais: {{players.country}}
+            </p>
+            <p *ngIf="players.isActive">Activo: Si</p>
+            <p *ngIf="!players.isActive">Activo: No</p>
+        </mat-card-content>
+       
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>

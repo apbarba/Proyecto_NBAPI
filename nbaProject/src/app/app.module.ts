@@ -4,6 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { JugadoresListComponent } from './components/jugadores-list/jugadores-list.component';
 import { EquiposListComponent } from './components/equipos-list/equipos-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialsImportModule } from './materials-import/materials-import.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +18,13 @@ import { EquiposListComponent } from './components/equipos-list/equipos-list.com
     EquiposListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialsImportModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
