@@ -1,0 +1,52 @@
+<header>
+    <div class="cabecero">
+        <img src="https://png.monster/wp-content/uploads/2022/02/png.monster-587.png" alt="">
+    </div>
+</header>
+
+<h1><a routerLink="">Home</a></h1>
+
+<mat-form-field id="color" fxLayoutAlign="center">
+   
+    <mat-label>Seleccionar Año</mat-label>
+   
+    <mat-select
+      [(value)]="anio"
+      (selectionChange)="getPaginacion(anio)"
+    >
+    <mat-option *ngFor="let anio of anios" [value]="anio">
+            {{anio}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+  <pagination-controls  fxLayoutAlign="left" (pageChange)="pageActual = $event"></pagination-controls>
+
+
+
+<div class="contenedor" fxLayout="row wrap" fxLayoutAlign="center">
+
+    <mat-card class="cartas" *ngFor="let entrenador of entrenadoresList | paginate: {itemsPerPage: 10, currentPage: pageActual}">
+       
+        <mat-card-header fxLayout="center">
+            
+            <mat-card-title>{{entrenador.firstName}} {{entrenador.lastName}}</mat-card-title>
+
+        </mat-card-header>
+      
+        <img class="imgEntrenadores" mat-card-image class="center" [src]="mostrarImg(entrenador)" alt="Jugadores" height="35%" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1774/1774530.png'">
+      
+        <mat-card-content>
+            <p>
+                Estatura: {{entrenador.college}} <br>
+                Equipo: {{entrenador.teamId}} <br>
+            </p>
+            <p *ngIf="entrenador.isAssistant">Activo: Si</p>
+            <p *ngIf="!entrenador.isAssistant">Activo: No</p>
+        </mat-card-content>
+       
+        
+    
+    </mat-card>
+    
+  </div>
