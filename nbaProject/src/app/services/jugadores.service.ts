@@ -16,9 +16,9 @@ export class JugadoresService {
    // return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/players?`)
   //}
 
-  getPlayers(): Observable<JugadoresResponse>{
+  getPlayers(year : string): Observable<JugadoresResponse>{
 
-   return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/data/10s/prod/v1/2022/players.json`);
+   return this.http.get<JugadoresResponse>(`${environment.apiBaseUrl}/data/10s/prod/v1/${year}/players.json`);
 
   }
 }

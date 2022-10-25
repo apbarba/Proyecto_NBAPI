@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog/equipos-dialog.component';
 
 
 
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EquiposListComponent,
     MainMenuComponent,
     ObtenerImgPipe,
+    EquiposDialogComponent,
   ],
   imports: [
     BrowserModule,

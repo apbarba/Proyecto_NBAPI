@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
-import { EquiposResponse } from '../interfaces/equipos';
+import { EquiposResponse } from '../Interfaces/equipos';
 
 @Injectable({
   providedIn: 'root',

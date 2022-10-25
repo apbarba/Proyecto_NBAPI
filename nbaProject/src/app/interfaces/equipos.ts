@@ -1,3 +1,5 @@
+import Player from "src/app/Interfaces/jugadores.interface";
+
 export interface EquiposResponse {
   _internal: Internal;
   league:    League;
@@ -56,4 +58,9 @@ export enum DivName {
   Pacific = "Pacific",
   Southeast = "Southeast",
   Southwest = "Southwest",
+}
+
+export interface InfoEquipo{
+  datosEquipo: Equipo;
+  jugadoresEquipo: Player[];
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Players } from 'src/app/Interfaces/jugadores.interface';
+import Player from 'src/app/Interfaces/jugadores.interface';
 import { JugadoresService } from 'src/app/services/jugadores.service';
 
 @Component({
@@ -9,19 +9,21 @@ import { JugadoresService } from 'src/app/services/jugadores.service';
 })
 export class JugadoresListComponent implements OnInit {
 
-  playersList: Players[] = [];
+  playersList: Player[] = [];
+  anoElegido ="2022"
+  anosPosibles = ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2022"]
   numPages = 0;
 
   constructor(private playersService: JugadoresService) { }
 
   ngOnInit(): void {
 
-   this.getPlayersPage();
+   this.getPlayersPage(this.anoElegido);
 
   }
-  
 
-  mostrarImg(players: Players){
+
+  mostrarImg(players: Player){
 
     let id = players.personId;
 
@@ -29,12 +31,12 @@ export class JugadoresListComponent implements OnInit {
 
   }
 
-  getPlayersPage(){
+  getPlayersPage(year:string){
 
-    this.playersService.getPlayers().subscribe((resp)=> {
+    this.playersService.getPlayers(year).subscribe((resp)=> {
 
      this.playersList = resp.league.standard;
-     
+
 
     });
 

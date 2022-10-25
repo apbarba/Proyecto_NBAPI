@@ -5,26 +5,26 @@
 </header>
 
 <div class="contenedor">
-    <mat-card class="cartas" *ngFor="let players of playersList">
+    <mat-card class="cartas" *ngFor="let player of playersList">
         <mat-card-header>
-            <mat-card-title>{{players.firstName}} {{players.lastName}}</mat-card-title>
+            <mat-card-title>{{player.firstName}} {{player.lastName}}</mat-card-title>
         </mat-card-header>
-      
-        <img mat-card-image class="center" [src]="mostrarImg(players)" alt="Jugadores">
-      
+
+        <img mat-card-image class="center" [src]="mostrarImg(player)" alt="Jugadores">
+
         <mat-card-content>
             <p>
-                Estatura: {{players.heightMeters}} <br>
-                Equipo: {{players.teamId}} <br>
-                Número de camiseta: {{players.jersey}} <br>
-                Año debut: {{players.nbaDebutYear}} <br>
-                Años Acctivo: {{players.yearsPro}} <br>
-                Pais: {{players.country}}
+                Estatura: {{player.heightMeters}} <br>
+                Equipo: {{player.teamId}} <br>
+                Número de camiseta: {{player.jersey}} <br>
+                Año debut: {{player.nbaDebutYear}} <br>
+                Años Acctivo: {{player.yearsPro}} <br>
+                Pais: {{player.country}}
             </p>
-            <p *ngIf="players.isActive">Activo: Si</p>
-            <p *ngIf="!players.isActive">Activo: No</p>
+            <p *ngIf="player.isActive">Activo: Si</p>
+            <p *ngIf="!player.isActive">Activo: No</p>
         </mat-card-content>
-       
+
         <mat-card-actions>
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>

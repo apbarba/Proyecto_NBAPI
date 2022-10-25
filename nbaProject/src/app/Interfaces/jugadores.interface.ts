@@ -18,16 +18,17 @@ export interface Internal {
 }
 
 export interface League {
-    standard:   Players[];
-    africa:     Players[];
-    sacramento: Players[];
-    vegas:      Players[];
-    utah:       Players[];
-}  //array1.concat(array2) Para unir dos arrays juntos
-    //[...array1, ...array2, ...array3] Los tres puntos 
+    standard:   Player[];
+    africa:     Player[];
+    sacramento: Player[];
+    vegas:      Player[];
+    utah:       Player[];
+
+}   //array1.concat(array2) Para unir dos arrays juntos
+    //[...array1, ...array2, ...array3] Los tres puntos
     //significa que coge los elementos del array para fusionarlos con los otros array
 
-export interface Players {
+export default interface Player {
     firstName:             string;
     lastName:              string;
     temporaryDisplayName?: string;
