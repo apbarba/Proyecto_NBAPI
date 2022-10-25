@@ -9,6 +9,7 @@ import { MaterialsImportModule } from './materials-import/materials-import.modul
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { EntrenadoresListComponent } from './components/entrenadores-list/entrenadores-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -17,7 +18,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
   declarations: [
     AppComponent,
     JugadoresListComponent,
-    EquiposListComponent
+    EquiposListComponent,
+    EntrenadoresListComponent
   ],
   imports: [
     BrowserModule,
