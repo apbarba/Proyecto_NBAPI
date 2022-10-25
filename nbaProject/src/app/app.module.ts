@@ -6,15 +6,9 @@ import { JugadoresListComponent } from './components/jugadores-list/jugadores-li
 import { EquiposListComponent } from './components/equipos-list/equipos-list.component';
 import { MaterialsImportModule } from './materials-import/materials-import.module';
 import { AppRoutingModule } from './app-routing.module';
-import { MainMenuComponent } from './components/main-menu/main-menu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog/equipos-dialog.component';
-
-
+import { EntrenadoresListComponent } from './components/entrenadores-list/entrenadores-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -22,9 +16,7 @@ import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog
     AppComponent,
     JugadoresListComponent,
     EquiposListComponent,
-    MainMenuComponent,
-    ObtenerImgPipe,
-    EquiposDialogComponent,
+    EntrenadoresListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +27,10 @@ import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialsImportModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

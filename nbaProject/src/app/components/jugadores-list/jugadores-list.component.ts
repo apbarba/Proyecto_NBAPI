@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Player from 'src/app/Interfaces/jugadores.interface';
+import { Player } from 'src/app/Interfaces/jugadores.interface';
 import { JugadoresService } from 'src/app/services/jugadores.service';
 
 @Component({
@@ -10,18 +10,19 @@ import { JugadoresService } from 'src/app/services/jugadores.service';
 export class JugadoresListComponent implements OnInit {
 
   playersList: Player[] = [];
-  anoElegido ="2022"
-  anosPosibles = ["2012","2013","2014","2015","2016","2017","2018","2019","2020","2022"]
+  lista2: Player[] = [];
   numPages = 0;
+  anio = '2022';
+  pageActual = 1;
+  anios = ['2003', '2006','2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'];
 
   constructor(private playersService: JugadoresService) { }
 
   ngOnInit(): void {
 
-   this.getPlayersPage(this.anoElegido);
+   this.getPlayersPage(this.anio);
 
   }
-
 
   mostrarImg(players: Player){
 
@@ -31,7 +32,7 @@ export class JugadoresListComponent implements OnInit {
 
   }
 
-  getPlayersPage(year:string){
+  getPlayersPage(year: string){
 
     this.playersService.getPlayers(year).subscribe((resp)=> {
 
@@ -41,5 +42,6 @@ export class JugadoresListComponent implements OnInit {
     });
 
   }
+
 
 }
