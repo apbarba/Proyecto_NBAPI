@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialsImportModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
