@@ -23,10 +23,10 @@ export interface League {
     sacramento: Player[];
     vegas:      Player[];
     utah:       Player[];
-}  //array1.concat(array2) Para unir dos arrays juntos
-    //[...array1, ...array2, ...array3] Los tres puntos 
-    //significa que coge los elementos del array para fusionarlos con los otros array
 
+}   //array1.concat(array2) Para unir dos arrays juntos
+    //[...array1, ...array2, ...array3] Los tres puntos
+    //significa que coge los elementos del array para fusionarlos con los otros array
 export interface Player {
     firstName:             string;
     lastName:              string;

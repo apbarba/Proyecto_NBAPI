@@ -4,14 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { JugadoresListComponent } from './components/jugadores-list/jugadores-list.component';
 import { EquiposListComponent } from './components/equipos-list/equipos-list.component';
-import { HttpClientModule } from '@angular/common/http';
 import { MaterialsImportModule } from './materials-import/materials-import.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog/equipos-dialog.component';
 import { EntrenadoresListComponent } from './components/entrenadores-list/entrenadores-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -19,18 +22,21 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     AppComponent,
     JugadoresListComponent,
     EquiposListComponent,
+    MainMenuComponent,
+    ObtenerImgPipe,
+    EquiposDialogComponent,
     EntrenadoresListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
+    MaterialsImportModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialsImportModule,
-    BrowserAnimationsModule,
     NgxPaginationModule,
-    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

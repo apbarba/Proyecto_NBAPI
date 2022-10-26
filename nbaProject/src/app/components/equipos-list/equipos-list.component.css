@@ -1,0 +1,41 @@
+#contenedor {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+a{
+  text-decoration: none;
+}
+
+header>h1{
+  font-family: 'basket';
+  color: #0069b5;
+  font-size: 4em
+}
+
+header{
+  margin-bottom: 40px;
+}
+
+#colorinchi{
+  background-color: rgb(212, 233, 251);
+  border: solid 1px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  padding : 5px;
+}
+
+
+
+mat-card {
+  border: solid 1px;
+  margin-top: 25px;
+  max-width: 200px;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
