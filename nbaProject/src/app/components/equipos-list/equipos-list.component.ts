@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Equipo } from 'src/app/Interfaces/equipos';
-import Player from 'src/app/Interfaces/jugadores.interface';
+import { Player } from 'src/app/Interfaces/jugadores.interface';
 import { EquiposService } from 'src/app/services/equipos.service';
 import { JugadoresService } from 'src/app/services/jugadores.service';
 import { EquiposDialogComponent } from './equipos-dialog/equipos-dialog.component';

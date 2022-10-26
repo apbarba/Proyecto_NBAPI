@@ -1,4 +1,4 @@
-import Player from "src/app/Interfaces/jugadores.interface";
+import {Player} from "src/app/Interfaces/jugadores.interface";
 
 export interface EquiposResponse {
   _internal: Internal;

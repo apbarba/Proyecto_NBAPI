@@ -1,4 +1,35 @@
-<ul>
-  <li><a routerLink="">Lista de Jugadores</a></li>
-  <li><a routerLink="equipos">Lista de Equipos</a></li>
-</ul>
+<header fxLayoutAlign="center center" fxLayout="column">
+  <div>
+    <img
+      src="https://graffica.info/wp-content/uploads/2017/08/NBA-logo-png-download-free-1200x675.png"
+      alt="logo NBA"
+      height="400px"
+    />
+  </div>
+  <h1>Menu Principal</h1>
+</header>
+
+<div id="contenedor" fxLayout="row wrap" fxLayoutAlign="space-around center">
+
+  <a routerLink="jugadores">
+   <div class="img-cont">
+    <img src="https://www.solobasket.com/sites/default/files/way-too-early-2021-nba-title-favorites.png" alt="Jugadores" width="400px">
+    <div>Jugadores</div>
+   </div>
+  </a>
+
+  <a routerLink="equipos">
+    <div class="img-cont">
+     <img src="https://www.greenberglawoffice.com/wp-content/uploads/NBA-Teams.jpg" alt="Equipos" width="400px">
+     <div>Equipos</div>
+    </div>
+   </a>
+
+   <a routerLink="entrenadores">
+    <div class="img-cont">
+     <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/09/09/15996409298215.jpg" alt="Entrenadores" width="400px">
+     <div>Entrenadores</div>
+    </div>
+   </a>
+
+</div>
