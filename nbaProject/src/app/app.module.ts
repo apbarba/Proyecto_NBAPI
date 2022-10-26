@@ -13,8 +13,8 @@ import { ObtenerImgPipe } from './pipes/obtener-img.pipe';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog/equipos-dialog.component';
-
-
+import { EntrenadoresListComponent } from './components/entrenadores-list/entrenadores-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog
     MainMenuComponent,
     ObtenerImgPipe,
     EquiposDialogComponent,
+    EntrenadoresListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +36,7 @@ import { EquiposDialogComponent } from './components/equipos-list/equipos-dialog
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
