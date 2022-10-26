@@ -1,0 +1,37 @@
+header>h1{
+    font-family: 'basket';
+    color: #0069b5;
+    font-size: 4em
+}
+
+.img-cont{
+    position: relative;
+}
+
+#contenedor{
+    margin-top: 100px;
+}
+
+a>div>img{
+    border-radius: 10px;
+    border: 10px solid #0069b5;
+}
+
+a>div>div{
+    font-family: 'basket';
+    text-decoration: none;
+    color: #0069b5;
+    position:absolute;
+    bottom: 25%;
+    background-color: rgb(255, 249, 249);
+    padding-left: 0;
+    width: 100%;
+    right: 0;
+    font-size:4em ;
+    text-align: center;
+    text-shadow: 3px 3px  black;
+    height: 50px;
+    
+}
+
+/*Comentarios*/

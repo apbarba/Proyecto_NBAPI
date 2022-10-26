@@ -23,7 +23,6 @@ export class JugadoresListComponent implements OnInit {
    this.getPlayersPage(this.anio); 
 
   }
-  
 
   mostrarImg(players: Player){
 
@@ -38,7 +37,7 @@ export class JugadoresListComponent implements OnInit {
     this.playersService.getPlayers(year).subscribe((resp)=> {
 
      this.playersList = resp.league.standard;
-     
+
 
     });
 

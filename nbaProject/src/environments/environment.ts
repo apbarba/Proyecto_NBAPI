@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://data.nba.net/',
-
-}
+  apiBaseUrl: 'http://data.nba.net'
+};
 
 /*
  * For easier debugging in development mode, you can import the following file
